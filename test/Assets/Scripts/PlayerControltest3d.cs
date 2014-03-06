@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerControltest : MonoBehaviour
+public class PlayerControltest3d : MonoBehaviour
 {
 	[HideInInspector]
 	public bool facingRight = true;	// For determining which way the player is currently facing.
 	[HideInInspector]
 	public bool jump = false;	// Condition for whether the player should jump.
+
 	
 	
 	public float moveForce = 365f;	// Amount of force added to move the player left and right.
@@ -29,6 +30,7 @@ public class PlayerControltest : MonoBehaviour
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+		
 	}
 	
 	
@@ -98,6 +100,12 @@ public class PlayerControltest : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+		if(!facingRight){
+		transform.localEulerAngles = new Vector3(0,-90,0);
+		//transform.position = Vector3(-10, 0, 0);
+		}else{
+			transform.localEulerAngles = new Vector3(0,90,0);
+		}
 	}
 	
 	
