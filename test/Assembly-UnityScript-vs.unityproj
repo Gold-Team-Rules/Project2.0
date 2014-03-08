@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{E5C00A68-E6DB-FEA3-938C-F34D364EA738}</ProjectGuid>
+	<ProjectGuid>{78007966-CCAA-E622-9386-42662A29392B}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,30 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
-     <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
-     <Compile Include="Assets\Scripts\Bomb.cs" />
-     <Compile Include="Assets\Scripts\BombPickup.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Destroyer.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\Gun.cs" />
-     <Compile Include="Assets\Scripts\HealthPickup.cs" />
-     <Compile Include="Assets\Scripts\LayBombs.cs" />
-     <Compile Include="Assets\Scripts\Pauser.cs" />
-     <Compile Include="Assets\Scripts\PickupSpawner.cs" />
-     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\PlayerControltest.cs" />
-     <Compile Include="Assets\Scripts\PlayerControltest3d.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Remover.cs" />
-     <Compile Include="Assets\Scripts\Rocket.cs" />
-     <Compile Include="Assets\Scripts\Score.cs" />
-     <Compile Include="Assets\Scripts\ScoreShadow.cs" />
-     <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
-     <Compile Include="Assets\Scripts\cameracontrol.cs" />
+     <Compile Include="Assets\Scripts\cameratester.js" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

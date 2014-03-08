@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerControltest3d : MonoBehaviour
+public class cameracontrol : MonoBehaviour
 {
-	[HideInInspector]
-	public bool facingRight = true;	// For determining which way the player is currently facing.
+	//[HideInInspector]
+	//public bool facingRight = true;	// For determining which way the player is currently facing.
 	[HideInInspector]
 	public bool jump = false;	// Condition for whether the player should jump.
-
 	
 	
 	public float moveForce = 365f;	// Amount of force added to move the player left and right.
@@ -22,15 +21,14 @@ public class PlayerControltest3d : MonoBehaviour
 	//private int tauntIndex; // The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;	// A position marking where to check if the player is grounded.
 	private bool grounded = false;	// Whether or not the player is grounded.
-	private Animator anim;	// Reference to the player's animator component.
+	//private Animator anim;	// Reference to the player's animator component.
 	
 	
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
-		anim = GetComponent<Animator>();
-		
+		//anim = GetComponent<Animator>();
 	}
 	
 	
@@ -51,7 +49,7 @@ public class PlayerControltest3d : MonoBehaviour
 		float h = Input.GetAxis("Horizontal");
 		
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
-		anim.SetFloat("Speed", Mathf.Abs(h));
+		//anim.SetFloat("Speed", Mathf.Abs(h));
 		
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
 		if(h * rigidbody2D.velocity.x < maxSpeed)
@@ -64,19 +62,19 @@ public class PlayerControltest3d : MonoBehaviour
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
 		
 		// If the input is moving the player right and the player is facing left...
-		if(h > 0 && !facingRight)
+		/*if(h > 0 && !facingRight)
 			// ... flip the player.
 			Flip();
 		// Otherwise if the input is moving the player left and the player is facing right...
 		else if(h < 0 && facingRight)
 			// ... flip the player.
 			Flip();
-		
+		*/
 		// If the player should jump...
 		if(jump)
 		{
 			// Set the Jump animator trigger parameter.
-			anim.SetTrigger("Jump");
+			//anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
 			//int i = Random.Range(0, jumpClips.Length);
@@ -91,7 +89,7 @@ public class PlayerControltest3d : MonoBehaviour
 	}
 	
 	
-	void Flip ()
+	/*void Flip ()
 	{
 		// Switch the way the player is labelled as facing.
 		facingRight = !facingRight;
@@ -100,13 +98,7 @@ public class PlayerControltest3d : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-		if(!facingRight){
-		transform.localEulerAngles = new Vector3(0,-90,0);
-		//transform.position = Vector3(-10, 0, 0);
-		}else{
-		transform.localEulerAngles = new Vector3(0,90,0);
-		}
-	}
+	}*/
 	
 	
 	/*public IEnumerator Taunt()
