@@ -29,7 +29,11 @@ public class PlayerHealth : MonoBehaviour
 
 
 	void OnCollisionEnter2D (Collision2D col)
-	{
+	{	
+		if(col.gameObject.tag == "health")
+		{
+			health=100f;
+		}
 		// If the colliding gameobject is an Enemy...
 		if(col.gameObject.tag == "Enemy")
 		{
