@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: rocket
-  m_TagString: Bullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,10 +164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4383004accee7494fba3cf64d65513c3, type: 3}
+  m_Script: {fileID: 11500000, guid: c907896b74e501f46aa4a9ae8a540711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -68,7 +68,9 @@
      <Compile Include="Assets\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\aarowaxe.cs" />
      <Compile Include="Assets\Scripts\cameracontrol.cs" />
+     <Compile Include="Assets\Scripts\projectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

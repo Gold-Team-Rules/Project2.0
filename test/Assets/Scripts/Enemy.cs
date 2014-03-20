@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 	public int HP = 2;					// How many times the enemy can be hit before it dies.
 	public Sprite deadEnemy;			// A sprite of the enemy when it's dead.
 	public Sprite damagedEnemy;			// An optional sprite of the enemy when it's damaged.
-	public AudioClip[] deathClips;		// An array of audioclips that can play when the enemy dies.
+	//public AudioClip[] deathClips;		// An array of audioclips that can play when the enemy dies.
 	public GameObject hundredPointsUI;	// A prefab of 100 that appears when the enemy dies.
 	public float deathSpinMin = -100f;			// A value to give the minimum amount of Torque when dying
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 	private SpriteRenderer ren;			// Reference to the sprite renderer.
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 	private bool dead = false;			// Whether or not the enemy is dead.
-	private Score score;				// Reference to the Score script.
+	//private Score score;				// Reference to the Score script.
 
 	
 	void Awake()
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
 		ren.sprite = deadEnemy;
 
 		// Increase the score by 100 points
-		score.score += 100;
+		//score.score += 100;
 
 		// Set dead to true.
 		dead = true;
@@ -97,16 +97,16 @@ public class Enemy : MonoBehaviour
 		}
 
 		// Play a random audioclip from the deathClips array.
-		int i = Random.Range(0, deathClips.Length);
-		AudioSource.PlayClipAtPoint(deathClips[i], transform.position);
+		//int i = Random.Range(0, deathClips.Length);
+		//AudioSource.PlayClipAtPoint(deathClips[i], transform.position);
 
 		// Create a vector that is just above the enemy.
-		Vector3 scorePos;
+		/*Vector3 scorePos;
 		scorePos = transform.position;
 		scorePos.y += 1.5f;
 
 		// Instantiate the 100 points prefab at this point.
-		Instantiate(hundredPointsUI, scorePos, Quaternion.identity);
+		Instantiate(hundredPointsUI, scorePos, Quaternion.identity);*/
 	}
 
 
