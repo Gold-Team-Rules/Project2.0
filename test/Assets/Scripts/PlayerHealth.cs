@@ -28,12 +28,22 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-	void OnCollisionEnter2D (Collision2D col)
-	{	
-		if(col.gameObject.tag == "health")
+
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "health") //go through health shrine to get health
 		{
 			health=100f;
 		}
+	}
+
+	void OnCollisionEnter2D (Collision2D col)
+	{	
+
+		/*if(col.gameObject.tag == "health") //collide with health shrine to get health
+		{
+			health=100f;
+		}*/
+
 		// If the colliding gameobject is an Enemy...
 		if(col.gameObject.tag == "Enemy")
 		{
