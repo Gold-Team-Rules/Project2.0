@@ -72,6 +72,9 @@
      <Compile Include="Assets\Scripts\cameracontrol.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
      <Compile Include="Assets\Scripts\sword.cs" />
+     <Compile Include="Assets\Scripts\throwingstar.cs" />
+     <Compile Include="Assets\Scripts\trigger1.cs" />
+     <Compile Include="Assets\Scripts\walljump.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
