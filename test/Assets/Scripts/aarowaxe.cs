@@ -5,7 +5,7 @@ public class aarowaxe : MonoBehaviour
 {
 	public float speed = 20f;				// The speed the axe or arrow.
 	public Rigidbody2D projectile;
-
+	public float timer = 0;
 	private PlayerControltest3d playerCtrl;		// Reference to the PlayerControl script.
 	//private Animator anim;					// Reference to the Animator component.
 
@@ -19,10 +19,14 @@ public class aarowaxe : MonoBehaviour
 
 
 	void Update ()
-	{
+	{	
+		timer += Time.deltaTime;
 		// If the fire button is pressed...
+		if(timer>=5){
+
 		if(Input.GetButtonDown("Fire1"))
 		{
+				timer=0;
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			//anim.SetTrigger("Shoot");
 			//audio.Play();
@@ -39,6 +43,7 @@ public class aarowaxe : MonoBehaviour
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
 				Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
 				projectileInstance.velocity = new Vector2(-speed, 0);
+			}
 			}
 		}
 	}

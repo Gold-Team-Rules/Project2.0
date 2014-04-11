@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\throwingstar.cs" />
      <Compile Include="Assets\Scripts\trigger1.cs" />
      <Compile Include="Assets\Scripts\walljump.cs" />
+     <Compile Include="Assets\aarowaxe2.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

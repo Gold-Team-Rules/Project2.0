@@ -396,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 94525240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.2512417, y: 5.17316151, z: -.0744628906}
+  m_LocalPosition: {x: -16.9847889, y: 5.17316151, z: -.0744628906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1666,6 +1666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   projectile: {fileID: 5000000, guid: cccb6fdca5fce44bc94bacf40fa493e8, type: 2}
+  timer: 0
 --- !u!114 &625396424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2162,10 @@ Prefab:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: a7412c39dc7d79b448f7d1f799bce991, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7412c39dc7d79b448f7d1f799bce991, type: 2}
   m_RootGameObject: {fileID: 862975899}
@@ -2520,7 +2525,7 @@ BoxCollider2D:
     type: 2}
   m_PrefabInternal: {fileID: 744530656}
   m_GameObject: {fileID: 862975899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
@@ -5197,6 +5202,7 @@ GameObject:
   - 95: {fileID: 1451592457}
   - 50: {fileID: 1451592456}
   - 114: {fileID: 1451592454}
+  - 114: {fileID: 1451592455}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -5231,6 +5237,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   projectile: {fileID: 5000000, guid: cccb6fdca5fce44bc94bacf40fa493e8, type: 2}
+  timer: 0
+--- !u!114 &1451592455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451592452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53d8b70ef7f66e4e83ad663c58c1ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  projectile: {fileID: 5000000, guid: cccb6fdca5fce44bc94bacf40fa493e8, type: 2}
+  timer: 0
+  player: {fileID: 625396416}
+  self: {fileID: 1451592453}
 --- !u!50 &1451592456
 Rigidbody2D:
   m_ObjectHideFlags: 0
