@@ -8,7 +8,8 @@ public class aarowaxe : MonoBehaviour
 	public float timer = 0;
 	private PlayerControltest3d playerCtrl;		// Reference to the PlayerControl script.
 	//private Animator anim;					// Reference to the Animator component.
-
+	 bool throwingstar = false;
+	public walljump throwing;
 
 	void Awake()
 	{
@@ -18,11 +19,21 @@ public class aarowaxe : MonoBehaviour
 	}
 
 
+
+
+
 	void Update ()
 	{	
 		timer += Time.deltaTime;
+
+		if (throwing.throwing==true) {
+			throwingstar=true;
+		}
+
+
 		// If the fire button is pressed...
-		if(timer>=5){
+		if(timer>=1){
+			if(throwingstar==true){
 
 		if(Input.GetButtonDown("Fire1"))
 		{
@@ -45,6 +56,7 @@ public class aarowaxe : MonoBehaviour
 				projectileInstance.velocity = new Vector2(-speed, 0);
 			}
 			}
+		}
 		}
 	}
 }

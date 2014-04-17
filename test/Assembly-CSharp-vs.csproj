@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\LayBombs.cs" />
+     <Compile Include="Assets\Scripts\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />

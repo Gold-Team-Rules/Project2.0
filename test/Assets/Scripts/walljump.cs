@@ -19,6 +19,8 @@ public class walljump : MonoBehaviour {
 	public LayerMask whatIsWall;
 	public float jumpForce = 700f;
 	public float jumpPushForce = 10f;
+	public bool doublejumping = false;
+	public bool throwing=false;
 
 	bool doubleJump = false;
 	
@@ -28,6 +30,18 @@ public class walljump : MonoBehaviour {
 		anim = GetComponent<Animator>();
 	}
 	
+
+
+
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "throwing") //allows for throwing star
+		{
+			throwing=true;
+		}
+	}
+
+
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		
